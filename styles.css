@@ -1,0 +1,276 @@
+:root {
+  --cherry: #d2243c;
+  --cherry-deep: #b8143f;
+  --cherry-ink: #8e0e33;
+  --blush: #f4d6de;
+  --paper: #faf7f7;
+  --card: #ffffff;
+  --ink: #1a1012;
+  --muted: #6b5b5e;
+  --line: #eadfe0;
+  --radius: 18px;
+  --shadow: 0 18px 50px rgba(26, 16, 18, 0.12);
+  --font: "Poppins", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--ink);
+  background:
+    radial-gradient(900px 420px at 50% -80px, #f8e0e6 0%, transparent 70%),
+    var(--paper);
+}
+
+a {
+  color: inherit;
+}
+
+.band {
+  height: 168px;
+  background:
+    radial-gradient(120% 140% at 50% -20%, #e14b62 0%, var(--cherry-deep) 42%, var(--cherry-ink) 100%);
+}
+
+.wrap {
+  width: min(920px, calc(100% - 32px));
+  margin: -108px auto 48px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(234, 223, 224, 0.9);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 28px 22px 26px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.logo {
+  width: 148px;
+  height: auto;
+  display: block;
+  margin: -92px auto 8px;
+  filter: drop-shadow(0 12px 18px rgba(142, 14, 51, 0.28));
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.tagline {
+  margin: 8px auto 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pills li {
+  background: var(--blush);
+  color: var(--cherry-ink);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sheet {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.group + .group {
+  margin-top: 18px;
+}
+
+.group h2 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.link-list {
+  display: grid;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: #fff;
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.link:hover {
+  transform: translateY(-1px);
+  border-color: #f4b8c4;
+  background: #fff7f8;
+}
+
+.link:focus-visible {
+  outline: 3px solid var(--cherry);
+  outline-offset: 2px;
+}
+
+.link .copy {
+  min-width: 0;
+}
+
+.link strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.link small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--blush);
+  color: var(--cherry-deep);
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.link.primary {
+  background: var(--cherry-deep);
+  border-color: var(--cherry-deep);
+  color: #fff;
+}
+
+.link.primary small {
+  color: #f8e0e6;
+}
+
+.link.primary .icon {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.link.primary:hover {
+  background: var(--cherry-ink);
+  border-color: var(--cherry-ink);
+}
+
+.photo {
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid var(--line);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo figcaption {
+  padding: 10px 12px 12px;
+  background: #1a1012;
+  color: #f4d6de;
+  font-size: 13px;
+}
+
+.contact {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.contact a {
+  color: var(--cherry-deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.edit {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (min-width: 800px) {
+  .card {
+    padding: 32px 32px 28px;
+  }
+
+  .sheet {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    align-items: start;
+  }
+
+  .photo {
+    position: sticky;
+    top: 20px;
+  }
+
+  .photo img {
+    min-height: 420px;
+  }
+}
